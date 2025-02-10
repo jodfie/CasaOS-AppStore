@@ -6,10 +6,9 @@ services:
       PEERPORT: "51413"
       PGID: "1000"
       PUID: "1000"
-      TRANSMISSION_WEB_HOME: /transmission-web-control/
       TZ: Europe/London
       USER: casaos
-    image: lscr.io/linuxserver/transmission:version-3.00-r5
+    image: linuxserver/transmission:4.0.4
     deploy:
       resources:
         reservations:
@@ -87,7 +86,6 @@ services:
 x-casaos:
   architectures:
     - amd64
-    - arm
     - arm64
   main: transmission
   author: CasaOS Team
@@ -127,7 +125,7 @@ x-casaos:
     - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Transmission/screenshot-3.png
   tagline:
     en_us: Transmission is a cross-platform BitTorrent client
-    zh_cn: Transmission 是一个跨平台的 BitTorrent 客户端
+    zh_cn: 跨平台的 BitTorrent 客户端
     ar_sa: Transmission هو عميل BitTorrent متعدد الأنظمة
     de_de: Transmission ist ein plattformübergreifender BitTorrent-Client
     es_es: Transmission es un cliente BitTorrent multiplataforma
